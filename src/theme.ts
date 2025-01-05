@@ -7,7 +7,7 @@ const theme = extendTheme({
     styles: {
         global: {
             "b, strong": {
-                color: "red.600",
+                color: "blue.700",
             },
             "i, em": {
                 color: "purple.600",
