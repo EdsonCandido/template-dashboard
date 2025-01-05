@@ -21,7 +21,7 @@ import {
     MenuDivider,
     MenuItem,
     MenuList,
-    Image,
+    // Image,
     Divider,
 } from '@chakra-ui/react'
 import { FiSettings, FiMenu, FiBell, FiChevronDown, } from 'react-icons/fi'
@@ -30,9 +30,8 @@ import { AiOutlineUser } from "react-icons/ai";
 
 import useAuth from "../../hooks/auth";
 
-import logoSvg from '../../assets/logo/AABB-azul.svg'
-import logoSvgAmarela from '../../assets/logo/AABB-amarelo.svg'
-
+// import logoSvg from '../../assets/logo/AABB-azul.svg'
+// import logoSvgAmarela from '../../assets/logo/AABB-amarelo.svg'
 
 type NavItemProps = FlexProps & {
     icon: IconType
@@ -65,7 +64,8 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             {...rest} >
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between" >
 
-                <Image src={logoSvg} alt="Logo" w={'100%'} h={'100%'} />
+                {/* <Image src={logoSvg} alt="Logo" w={'100%'} h={'100%'} /> */}
+                <Text>SUA LOGO</Text>
 
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
@@ -147,7 +147,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
             />
 
             <Text display={{ base: 'flex', md: 'none' }} fontSize="2xl" fontFamily="monospace" fontWeight="bold" justifyContent={'center'}>
-                <Image src={logoSvgAmarela} alt="Logo" w={'40%'} h={'40%'} />
+                {/* <Image src={logoSvgAmarela} alt="Logo" w={'40%'} h={'40%'} /> */}
+                <Text>SUA LOGO</Text>
             </Text>
 
 

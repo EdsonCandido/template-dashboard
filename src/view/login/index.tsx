@@ -4,7 +4,7 @@ import {
     FormControl,
     FormLabel,
     Heading,
-    Image,
+    // Image,
     Input,
     Stack,
     Text,
