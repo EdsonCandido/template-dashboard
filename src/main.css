@@ -1,0 +1,28 @@
+.dx-datagrid-borders > .dx-datagrid-headers {  
+  border-top-left-radius: 5px;  
+  border-top-right-radius: 5px;  
+}  
+.dx-datagrid-borders > .dx-datagrid-total-footer,   
+.dx-datagrid-borders > .dx-datagrid-rowsview {  
+  border-bottom-left-radius: 5px;  
+  border-bottom-right-radius: 5px;  
+}  
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 100px;
+  }
+
+
+* {
+  font-family: 'Montserrat', sans-serif, ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
