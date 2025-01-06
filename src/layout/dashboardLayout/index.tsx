@@ -65,7 +65,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between" >
 
                 {/* <Image src={logoSvg} alt="Logo" w={'100%'} h={'100%'} /> */}
-                <Text>SUA LOGO</Text>
+                <Text as="strong" fontSize={'18px'}>SUA LOGO</Text>
 
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
@@ -148,7 +148,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
 
             <Text display={{ base: 'flex', md: 'none' }} fontSize="2xl" fontFamily="monospace" fontWeight="bold" justifyContent={'center'}>
                 {/* <Image src={logoSvgAmarela} alt="Logo" w={'40%'} h={'40%'} /> */}
-                <Text>SUA LOGO</Text>
+                <Text as="strong">SUA LOGO</Text>
             </Text>
 
 
