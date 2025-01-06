@@ -20,6 +20,20 @@ const Settings = () => {
                             ref: '/admin/settings'
                         }
                     })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
+                        <Text>Clientes</Text>
+                    </Box>
+                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('banners', {
+                        state: {
+                            ref: '/admin/settings'
+                        }
+                    })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
+                        <Text>Documentos</Text>
+                    </Box>
+                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('banners', {
+                        state: {
+                            ref: '/admin/settings'
+                        }
+                    })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
                         <Text>Banners</Text>
                     </Box>
                     <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('services', {
@@ -28,13 +42,6 @@ const Settings = () => {
                         }
                     })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
                         <Text>Serviços</Text>
-                    </Box>
-                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('noticias', {
-                        state: {
-                            ref: '/admin/settings'
-                        }
-                    })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
-                        <Text>Noticias</Text>
                     </Box>
                 </SimpleGrid>
             </Stack>
