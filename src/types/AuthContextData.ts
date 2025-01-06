@@ -6,7 +6,7 @@ export type User = {
     nome: string;
     cpf: string;
     login: string;
-    senha: string;
+    senha?: string;
     is_primeiro_acesso: string;
     is_admin: number;
     is_ativo: number;
