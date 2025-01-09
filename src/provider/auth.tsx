@@ -213,6 +213,7 @@ const AuthProvider = ({ children }: ContextProviderProps) => {
     signOut();
     toast.error("Sua sessão expirou, faça login novamente");
   }
+  
   http.interceptors.response.use(
     (response) => {
       return response;
@@ -225,7 +226,6 @@ const AuthProvider = ({ children }: ContextProviderProps) => {
         !originalRequest._retry
       ) {
         originalRequest._retry = true;
-        // signOut();
         await refreshAccessToken();
         // if (newAccessToken.success) {
         //   originalRequest.headers.Authorization = `Bearer ${newAccessToken.data.accessToken}`;
