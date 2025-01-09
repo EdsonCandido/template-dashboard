@@ -15,7 +15,7 @@ const Settings = () => {
                     })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
                         <Text>Usuários</Text>
                     </Box>
-                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('banners', {
+                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('clientes', {
                         state: {
                             ref: '/admin/settings'
                         }
