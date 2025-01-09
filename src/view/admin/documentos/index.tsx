@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
-const Arquivos = () => {
+const Documentos = () => {
     const router = useNavigate();
 
     const [isLoadingPage, setIsloadingPage] = useState(false);
@@ -42,7 +42,7 @@ const Arquivos = () => {
           }}
         >
           {" "}
-          Configurações / Admin / Arquivos
+          Configurações / Admin / Documentos
         </Text>
       </Flex>
       <Stack
@@ -74,4 +74,4 @@ const Arquivos = () => {
   );
 };
 
-export default Arquivos;
+export default Documentos;

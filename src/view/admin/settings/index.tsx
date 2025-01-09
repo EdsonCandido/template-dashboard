@@ -22,7 +22,7 @@ const Settings = () => {
                     })} p={1} textAlign={'center'} borderColor={'gray.200'} borderWidth={'4px'} borderRadius={'5px'}>
                         <Text>Clientes</Text>
                     </Box>
-                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('banners', {
+                    <Box alignContent={'center'} cursor={'pointer'} onClick={() => router('documentos', {
                         state: {
                             ref: '/admin/settings'
                         }

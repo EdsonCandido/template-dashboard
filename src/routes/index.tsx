@@ -13,6 +13,7 @@ const UsersAdminLazy = lazy(() => import('../view/admin/users'));
 const BannersAdminLazy = lazy(() => import('../view/admin/banners'));
 const ServicesAdminLazy = lazy(() => import('../view/admin/services'));
 const NoticiasAdminLazy = lazy(() => import('../view/admin/noticias'));
+const DocumentosAdminLazy = lazy(() => import('../view/admin/documentos'));
 
 type IProps = {
     isAdmin?: boolean;
@@ -52,6 +53,13 @@ const RoutesAplication = () => {
                     <Autenticate isAdmin>
                         <Suspense fallback={<LoadingPage />}>
                             <UsersAdminLazy />
+                        </Suspense>
+                    </Autenticate>
+                } />
+                <Route path='/admin/settings/documentos' element={
+                    <Autenticate isAdmin>
+                        <Suspense fallback={<LoadingPage />}>
+                            <DocumentosAdminLazy />
                         </Suspense>
                     </Autenticate>
                 } />
