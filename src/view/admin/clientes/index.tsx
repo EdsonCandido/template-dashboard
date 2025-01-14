@@ -2,28 +2,30 @@ import { Button, Flex, Stack, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router";
+import Loading from "../../../components/Loading";
+import TabelaClientes from "../../../components/admin/Clientes/TabelaClientes";
 
 const Clientes = () => {
-    const router = useNavigate();
+  const router = useNavigate();
 
-    const [isLoadingPage, setIsloadingPage] = useState(false);
+  const [isLoadingPage, setIsloadingPage] = useState(false);
+  const [dataRequest, setDataRequest] = useState<null | []>(null);
 
+  const onOpenModal = (cod?: number) => {
+    console.log("cod", cod);
+  };
 
-    const onOpenModal = (cod?: number) => {
-        console.log('cod', cod);
-    }
+  const onInit = async () => {
+    setIsloadingPage(true);
 
-    const onInit = async () => {
-        setIsloadingPage(true);
+    setTimeout(() => {
+      setIsloadingPage(false);
+    }, 2500);
+  };
 
-        setTimeout(() => {
-            setIsloadingPage(false);
-        }, 2500);
-    }
-
-    useEffect(() => {
-        void onInit();
-    }, []);
+  useEffect(() => {
+    void onInit();
+  }, []);
 
   return (
     <Flex
@@ -41,7 +43,6 @@ const Clientes = () => {
             color: "blue",
           }}
         >
-          {" "}
           Configurações / Admin / Clientes
         </Text>
       </Flex>
@@ -54,7 +55,6 @@ const Clientes = () => {
         boxShadow={"lg"}
       >
         <Flex w={"100%"} justify={"space-between"}>
-          <Flex w={"100%"}></Flex>
           <Flex w={"100%"} justify={"flex-end"}>
             <Button
               onClick={() => onOpenModal()}
@@ -64,11 +64,25 @@ const Clientes = () => {
               size={"sm"}
               leftIcon={<FaPlus />}
             >
-              {" "}
-              Novo{" "}
+              Novo
             </Button>
           </Flex>
         </Flex>
+      </Stack>
+
+      <Stack
+        w={"100%"}
+        bg={"white"}
+        borderRadius={"5px"}
+        p={"10px"}
+        gap={"10px"}
+        boxShadow={"lg"}
+      >
+        {isLoadingPage ? (
+          <Loading />
+        ) : (
+          <TabelaClientes dataRequest={dataRequest} openModal={onOpenModal} />
+        )}
       </Stack>
     </Flex>
   );
