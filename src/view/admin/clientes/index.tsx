@@ -4,6 +4,7 @@ import { FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router";
 import Loading from "../../../components/Loading";
 import TabelaClientes from "../../../components/admin/Clientes/TabelaClientes";
+import { http } from "../../../services/http";
 
 const Clientes = () => {
   const router = useNavigate();
@@ -16,11 +17,16 @@ const Clientes = () => {
   };
 
   const onInit = async () => {
-    setIsloadingPage(true);
+    setIsloadingPage(true); 
 
-    setTimeout(() => {
-      setIsloadingPage(false);
-    }, 2500);
+    const request = await http.get('/clients')
+      .then((e) => ({data: e.data, success: true}))
+      .catch(() => ({data: null, success: false}))
+
+      if(request.success){
+        setDataRequest(request.data);
+        setIsloadingPage(false);
+      }
   };
 
   useEffect(() => {
