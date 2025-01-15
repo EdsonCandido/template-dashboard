@@ -69,9 +69,8 @@ const TabelaClientes = ({ dataRequest, openModal }: input) => {
   return (
     <DataGrid
       dataSource={dataFormat}
-      keyExpr={"cod"}
+      keyExpr={"clientId"}
       width="100%"
-      height={"35hw"}
       hoverStateEnabled={true}
       showRowLines={true}
       allowColumnResizing={true}
