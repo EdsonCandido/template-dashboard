@@ -128,7 +128,7 @@ const TabelaClientes = ({ dataRequest, openModal }: input) => {
         caption="Criado em."
         dataField="createAt"
         minWidth={100}
-        cellRender={(e) => <Text> {dateFormat(e.value, "dd/MM/yyyy")}</Text>}
+        cellRender={(e) => <Text> {dateFormat(e.value, "dd/MM/yyyy HH:mm")}</Text>}
       />
     </DataGrid>
   );
