@@ -21,7 +21,7 @@ locale('pt-BR');
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/template-dashboard'>
       <ChakraProvider theme={theme} >
         <CustomProvider locale={ptBR}>
           <ThemeProvider attribute="class" disableTransitionOnChange>

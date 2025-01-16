@@ -14,7 +14,7 @@ export default ({ mode }: { mode: string }) => {
       algorithm: 'gzip',
     }),
     ],
-    // base: "/template-dashboard",
+    base: "/template-dashboard",
     server: {
       open: true,
       watch: {
