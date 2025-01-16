@@ -1,0 +1,6 @@
+import{g as a}from"./@babel-EnWrEA7o.js";import{i as C}from"./isobject-CEi73sWr.js";/*!
+ * get-value <https://github.com/jonschlinkert/get-value>
+ *
+ * Copyright (c) 2014-2018, Jon Schlinkert.
+ * Released under the MIT License.
+ */const V=C;var w=function(r,f,e){if(V(e)||(e={default:e}),!A(r))return typeof e.default<"u"?e.default:r;typeof f=="number"&&(f=String(f));const y=Array.isArray(f),s=typeof f=="string",l=e.separator||".",j=e.joinChar||(typeof l=="string"?l:".");if(!s&&!y)return r;if(s&&f in r)return d(f,r,e)?r[f]:e.default;let u=y?f:x(f,l,e),c=u.length,n=0;do{let i=u[n];for(typeof i=="number"&&(i=String(i));i&&i.slice(-1)==="\\";)i=b([i.slice(0,-1),u[++n]||""],j,e);if(i in r){if(!d(i,r,e))return e.default;r=r[i]}else{let m=!1,t=n+1;for(;t<c;)if(i=b([i,u[t++]],j,e),m=i in r){if(!d(i,r,e))return e.default;r=r[i],n=t-1;break}if(!m)return e.default}}while(++n<c&&A(r));return n===c?r:e.default};function b(r,f,e){return typeof e.join=="function"?e.join(r):r[0]+f+r[1]}function x(r,f,e){return typeof e.split=="function"?e.split(r):r.split(f)}function d(r,f,e){return typeof e.isValid=="function"?e.isValid(r,f):!0}function A(r){return V(r)||Array.isArray(r)||typeof r=="function"}const k=a(w);export{k as g};
