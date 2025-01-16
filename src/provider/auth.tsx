@@ -41,12 +41,13 @@ const AuthProvider = ({ children }: ContextProviderProps) => {
       login,
       senha: password,
     };
+    console.log("payload", payload);
 
     // const request = await http.post('/session/login', payload)
     //     .then(e => ({ data: e.data, success: true, error: null, message: 'OK' }))
     //     .catch(e => ({ data: null, success: false, error: e.response?.data, message: e.response?.data || e.message }))
 
-    const request: any = await new Promise((resolve, reject) => {
+    const request: any = await new Promise((resolve, _) => {
       const result = {
         success: true,
         data: {
