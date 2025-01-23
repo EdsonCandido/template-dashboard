@@ -48,4 +48,5 @@ const Settings = () => {
         </Flex>
     );
 }
+
 export default Settings;
