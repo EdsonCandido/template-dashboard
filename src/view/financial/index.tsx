@@ -1,12 +1,26 @@
 import { Flex, Stack, Text } from "@chakra-ui/react";
-import { memo } from "react";
-import { useNavigate } from "react-router";
+import { memo, useEffect, useState } from "react";
+// import { useNavigate } from "react-router";
 import Card from "../../components/financeiro/Card";
 import { numberForMoney } from "../../utils/mask";
 import ListFinancial from "../../components/financeiro/ListFinancial";
 
 const FinancialPage = () => {
-  const router = useNavigate();
+  // const router = useNavigate();
+
+  const [isLoadingPage, setIsLoadingPage] = useState(false);
+
+  const onInit = async () => {
+    setIsLoadingPage(true);
+
+    setTimeout(() => {
+      setIsLoadingPage(false);
+    }, 300);
+  };
+
+  useEffect(() => {
+    void onInit();
+  }, []);
   return (
     <Flex flexDir={"column"} justifyContent={"center"} alignItems={"flex-start"} gap={"10px"}>
       <Flex>
@@ -27,7 +41,7 @@ const FinancialPage = () => {
         </Flex>
       </Stack>
 
-      <ListFinancial dataRequest={[]} />
+      <ListFinancial dataRequest={[]} isLoadingPage={isLoadingPage} />
     </Flex>
   );
 };
